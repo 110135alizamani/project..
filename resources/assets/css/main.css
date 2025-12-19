@@ -1,0 +1,148 @@
+/* 🧵 ایمپورت فونت‌ها و فایل‌های پایه */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add"); /* آیکن‌های متریال */
+@import url('css.color/light-mc.css');       /* رنگ‌های متریال روشن */
+@import url('type-system.css');              /* تایپوگرافی متریال */
+@import url('../../components/cards.css');
+@import url('../../components/tables.css');
+@import url('../../components/forms.css');   /* استایل فرم‌ها */
+@import url('../../components/buttons.css'); /* استایل دکمه‌ها */
+
+/* 🌐 تنظیمات پایه برای بدنه سایت */
+body {
+  direction: rtl;                                            /* راست‌چین برای زبان فارسی */
+  text-align: right;                                         /* تراز متن به راست */
+  background-color: var(--md-sys-color-background);          /* رنگ پس‌زمینه کلی سایت */
+  color: var(--md-sys-color-on-background);                  /* رنگ متن اصلی */
+  font-family: "Vazirmatn", sans-serif;                      /* فونت اصلی سایت */
+  margin: 0;                                                 /* حذف فاصله بیرونی */
+  padding: 0;                                                /* حذف فاصله داخلی */
+  line-height: 1.8;                                          /* فاصله بین خطوط */
+  font-size: 1.1rem;                                         /* اندازه پایه فونت */
+}
+
+/* 🧭 هدر سایت */
+header {
+  background-color: var(--md-sys-color-primary-container);   /* رنگ پس‌زمینه هدر */
+  color: var(--md-sys-color-on-primary-container);           /* رنگ متن هدر */
+  padding: 2rem;                                             /* فاصله داخلی هدر */
+  box-shadow: 0 4px 8px var(--md-sys-color-shadow);          /* سایه زیر هدر */
+  border-bottom: 3px solid var(--md-sys-color-primary);      /* خط پایین هدر */
+}
+
+/* 🧭 منوی ناوبری */
+nav ul {
+  list-style: none;                                          /* حذف بولت‌ها */
+  display: flex;                                             /* چیدمان افقی */
+  gap: 2rem;                                                 /* فاصله بین آیتم‌ها */
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: var(--md-sys-color-on-primary-container);           /* رنگ لینک‌ها */
+  text-decoration: none;                                     /* حذف زیرخط */
+  font-weight: bold;                                         /* ضخامت فونت */
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;    /* انیمیشن رنگ */
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--md-sys-color-tertiary);            /* خط زیر لینک در هاور */
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--md-sys-color-primary-fixed);       /* رنگ پس‌زمینه هاور */
+  color: var(--md-sys-color-on-primary-fixed);               /* رنگ متن هاور */
+}
+
+nav a:hover::after {
+  width: 100%;                                               /* نمایش کامل خط زیر لینک */
+}
+
+/* 📜 فوتر سایت */
+footer {
+  background-color: var(--md-sys-color-surface-variant);     /* رنگ پس‌زمینه فوتر */
+  color: var(--md-sys-color-on-surface);                     /* رنگ متن فوتر */
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--md-sys-color-outline);         /* خط بالای فوتر */
+}
+
+/* 📦 محتوای اصلی صفحات */
+main {
+  padding: 3rem 2rem;                                        /* فاصله داخلی محتوا */
+  background-color: var(--md-sys-color-surface);             /* رنگ پس‌زمینه بخش اصلی */
+  color: var(--md-sys-color-on-surface);                     /* رنگ متن اصلی */
+}
+
+/* 📦 بخش‌های داخلی مثل درباره، تیم، گزارش */
+section {
+  background-color: var(--md-sys-color-surface-container-high); /* رنگ پس‌زمینه سکشن */
+  border: 1px solid var(--md-sys-color-outline-variant);        /* کادر دور سکشن */
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px var(--md-sys-color-shadow);             /* سایه سکشن */
+}
+
+/* 🧩 تیترهای اصلی */
+h1 {
+  margin-top: 0rem;
+  font-size: 2.2rem;
+  color: var(--md-sys-color-on-primary-container);
+}
+
+/* 🧩 تیترهای فرعی */
+h2 {
+  font-size: 1.6rem;
+  color: var(--md-sys-color-tertiary);
+  border-right: 5px solid var(--md-sys-color-tertiary-container);
+  padding-right: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* 📋 لیست‌ها */
+ul {
+  padding-right: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.75rem;
+  padding-right: 0.75rem;
+  position: relative;
+}
+
+ul li::before {
+  content: "✦";                                              /* آیکن سفارشی برای لیست */
+  position: absolute;
+  right: -1.5rem;
+  color: var(--md-extended-color-custom-color2-color);
+  font-size: 1.2rem;
+}
+
+/* 🔗 لینک‌های داخل متن */
+a {
+  color: var(--md-sys-color-primary);
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--md-sys-color-tertiary);
+}
+
+/* 🖼️ تصاویر */
+img {
+  max-width: 100%;                                           /* جلوگیری از بیرون‌زدن تصویر */
+}

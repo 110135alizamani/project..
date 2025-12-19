@@ -1,0 +1,50 @@
+/* 🎯 پایه مشترک کارت */
+.card {
+    border-radius: 12px;                          /* گوشه‌های گرد برای ظاهر مدرن و نرم */
+    padding: 16px;                                /* فاصله داخلی استاندارد برای محتوا */
+    font-family: var(--md-sys-typescale-body-medium-font); /* خانواده فونت طبق تایپوگرافی MD3 */
+    font-size: var(--md-sys-typescale-body-medium-size);   /* اندازه فونت متن کارت */
+    font-weight: var(--md-sys-typescale-body-medium-weight);/* وزن فونت متن کارت */
+    line-height: var(--md-sys-typescale-body-medium-line-height);/* فاصله خطوط متن کارت */
+  }
+  
+  /* 🟦 Filled Card */
+  .card-filled {
+    background-color: var(--md-sys-color-surface-container); /* پس‌زمینه پر طبق رنگ سطح MD3 */
+    color: var(--md-sys-color-on-surface);                   /* رنگ متن روی سطح */
+    border: none;                                            /* بدون کادر */
+    box-shadow: none;                                        /* بدون سایه */
+  }
+  
+  /* ⚪ Outlined Card */
+  .card-outlined {
+    background-color: transparent;                           /* پس‌زمینه شفاف */
+    color: var(--md-sys-color-on-surface);                   /* رنگ متن روی سطح */
+    border: 1px solid var(--md-sys-color-outline);           /* کادر مشخص طبق رنگ outline */
+    box-shadow: none;                                        /* بدون سایه */
+  }
+  
+  /* 🟣 Elevated Card */
+  .card-elevated {
+    background-color: var(--md-sys-color-surface);           /* پس‌زمینه سطح اصلی */
+    color: var(--md-sys-color-on-surface);                   /* رنگ متن روی سطح */
+    border: none;                                            /* بدون کادر */
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.3),                 /* سایه کوچک و نزدیک */
+                0px 1px 3px rgba(0,0,0,0.15);                /* سایه نرم‌تر برای عمق */
+  }
+  
+/* 🔹 چینش کارت‌های فعالیت‌های اخیر */
+.activities-grid {
+    display: grid;                                           /* استفاده از Grid برای چینش منظم */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* ستون‌ها به صورت خودکار با حداقل 240px */
+    gap: 1rem;                                               /* فاصله بین کارت‌ها */
+  }
+  
+  /* 🔹 چینش دکمه‌ها در بخش CTA */
+  .cta-buttons {
+    display: flex;                                           /* دکمه‌ها کنار هم قرار می‌گیرند */
+    gap: 1rem;                                               /* فاصله بین دکمه‌ها */
+    flex-wrap: wrap;                                         /* در موبایل دکمه‌ها می‌رن زیر هم */
+    justify-content: flex-start;                             /* چینش از سمت راست (چون RTL هست) */
+  }
+    
